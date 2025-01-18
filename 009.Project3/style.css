@@ -12,6 +12,7 @@ body{
     background-color: #05080a;
     padding: 16px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header-logo{
@@ -20,10 +21,35 @@ body{
     margin-left: 16px;
 }
 
+.header-nav ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    gap: 16px;
+}
+
+.header-nav a{
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 6px;
+}
+
+a.header-nav-active{
+    background-color: #cde300;
+    color: #0c1014;
+    pointer-events: none;
+}
+
+.header-nav a:hover{
+    text-decoration: underline;
+}
+
 .main-title{
     font-size: 62px;
     text-transform: uppercase;
     text-align: center;
     margin: 46px 0;
 }
+
 

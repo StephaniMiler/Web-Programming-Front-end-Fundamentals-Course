@@ -6,13 +6,47 @@
     <title>Popover</title>
 
     <style>
-        
+        :popover-open{
+            width: 300px;
+            padding: 0 10px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        ::backdrop{
+            background-color: rgba(0,0,0,.32);
+        }
+
+        .popover-container :popover-open{
+            inset: unset;
+        }
     </style>
 
 </head>
 
 <body>
     
+    <h1>Web Design Course - popover</h1>
+
+    <button popovertarget="my-popover">Toggle popover</button>
+    <div id="my-popover" popover>This text is open when you click</div>
+    <hr>
+    <button popovertarget="my-popover2" >popover auto (default)</button>
+    <div id="my-popover2" popover>This text is open when you click</div>
+    <hr>
+    <button popovertarget="my-popover3" >popover manual</button>
+    <div id="my-popover3" popover="manual">This text is open when you click</div>
+    <hr>
+    <button popovertarget="my-popover4" popovertargetaction="show">popover manual open</button>
+    <button popovertarget="my-popover4" popovertargetaction="hide">popover manual close</button>
+    <div id="my-popover4" popover>This text is open when you click</div>
+    <hr>
+    <div class="popover-container">
+        <button popovertarget="my-popover5">Toggle Popover</button>
+        <div popover id="my-popover5">Lorem ipsum dolor sit amet.</div>
+    </div>
+
+
 
 </body>
 </html>

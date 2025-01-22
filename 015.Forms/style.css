@@ -52,3 +52,19 @@ legend{
     font-size: 1.2em;
 }
 
+.actions{
+    display: flex;
+    gap: 1;
+}
+
+.btn{
+    background-color: #2b2b80;
+    color: white;
+    cursor: pointer;
+}
+
+.btn2{
+    background-color: #d20505;
+    color: white;
+    cursor: pointer;
+}

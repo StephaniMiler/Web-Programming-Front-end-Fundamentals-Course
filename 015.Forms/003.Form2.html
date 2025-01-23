@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Form2</title>
 
+    <style>
+        body{
+            padding-bottom: 100vh;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -49,11 +55,96 @@
             <label><input type="checkbox" name="interest" value="pyton">Pyton</label>
             <label><input type="checkbox" name="interest" value="java">Java</label>
             
+            <br><br>
 
+            <select name="language" required multiple size="5">
+                <option value="">Choose a language</option>
+                <optgroup label="frontend">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="Javascript">Javascript</option>
+                </optgroup>
+
+                <optgroup label="backend">
+                    <option value="pyton">Pyton</option>
+                    <option value="java">Java</option>
+                </optgroup>
+
+            </select>
+
+            <br><br>
+
+            <input type="text" list="language-list">
+            <datalist id="language-list">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="Javascript">
+                <option value="Pyton">
+                <option value="Java">
+                <option value="PHP">
+            </datalist>
+
+        </fieldset>
+
+        <fieldset>
+            
+            <legend>Message</legend>
+            <textarea name="msg" cols="30" rols="10"></textarea>
+            <br><br>
+            <textarea cols="50" rols="10" readonly>USE AGREEMENT
+
+                1. Acceptance of Terms  
+                   By accessing or using this website/application, you agree to comply with these Terms of Use. If you do not agree, you must not use this service.  
+
+                2. Changes to Terms  
+                   We reserve the right to modify these Terms of Use at any time. Changes will be effective upon posting. Continued use constitutes acceptance of the revised terms.  
+
+                3. User Responsibilities  
+                   3.1. You agree to use this service for lawful purposes only.  
+                   3.2. You will not engage in activities that disrupt or interfere with the proper functioning of the service.  
+                   3.3. You are responsible for maintaining the confidentiality of your account credentials.  
+
+                4. Prohibited Activities  
+                   4.1. Attempting to gain unauthorized access to any part of the service.  
+                   4.2. Engaging in fraudulent, abusive, or illegal behavior.  
+                   4.3. Uploading harmful or malicious content, including viruses.  
+
+                5. Intellectual Property  
+                   5.1. All content, trademarks, and materials on this service are owned or licensed by us.  
+                   5.2. You may not reproduce, distribute, or modify content without prior written permission.  
+
+                6. Termination of Use  
+                   We reserve the right to suspend or terminate your access to the service at our sole discretion, without notice, for any violation of these Terms of Use.  
+
+                7. Third-Party Links  
+                   This service may contain links to third-party websites. We are not responsible for the content, privacy policies, or practices of these external sites.  
+
+                8. Limitation of Liability  
+                   To the maximum extent permitted by law, we are not liable for any damages, including loss of data, revenue, or profits, arising from the use of this service.  
+
+                9. Privacy  
+                   Your use of this service is subject to our Privacy Policy, which governs the collection and use of personal data.  
+
+                10. Governing Law  
+                    These Terms of Use are governed by and construed in accordance with the laws of [insert applicable jurisdiction].  
+
+                11. Contact Information  
+                    For any questions or concerns regarding these Terms of Use, please contact us at [insert contact details].  
+
+            </textarea>
+            <br>
+            <label>
+                <input type="checkbox"> I have read and agree to the Terms of Use
+            </label>
+
+            <br><br><br>
+            <input type="file" value="Choose a file">
+       
         </fieldset>
 
         <br><br>
         <input type="submit" value="Submit">
+        <input type="button" value="Submit">
 
     </form>
     

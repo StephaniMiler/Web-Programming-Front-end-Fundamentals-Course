@@ -8,11 +8,21 @@
 <body>
     <h1>Meter</h1>
 
+    <label>Temperatura Computador</label>
     <meter min="0" max="100" low="30" high="90" value="95" optimum="20"></meter>
 
     <h1>Progress</h1>
 
+    <label> Porcentagem da tarefa</label>
     <progress max="100" value="10">10%</progress>
+
+    <br><br>
+
+    <form oninput="result.value= a.value * b.value">
+        <input type="number" name="a" id="a"> X
+        <input type="number" name="b" id="b"> =
+        <output name="result" for="a b">20</output>
+    </form>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+article{
+    outline: 4px solid black;
+}
+
+article a{
+    color: red;
+}
+
+article a > b{
+    color: green;
+}
+
+h3 + p{
+    background-color: aqua;
+}

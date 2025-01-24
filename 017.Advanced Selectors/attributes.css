@@ -1,0 +1,16 @@
+a[href="#"]{
+    color: red;
+    opacity: .2;
+}
+
+a[href^="http"]{
+    color: aqua;
+}
+
+a[href$=".pdf"]{
+    color: green;
+}
+
+a[target="_blank"]{
+    background-color: rgb(9, 47, 56);
+}

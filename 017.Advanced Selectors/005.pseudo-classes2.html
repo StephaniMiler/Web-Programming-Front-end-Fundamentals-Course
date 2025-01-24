@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes</title>
+
+    <style>
+        button{
+            background-color: #ccc;
+            color: white;
+            border: none;
+            padding: 1em;
+            margin-bottom: .5em;
+
+        }
+
+        button:disabled{
+            opacity: .5;
+        }
+
+        p:empty:before{
+            content: "paragrafo vazio";
+        }
+
+        a:hover{
+            background-color: yellow;
+        }
+
+        input[type="text"]{
+            background-color: #999;
+            border: none;
+            padding: .5em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button>Go</button><br>
+    <button disabled>Go disable</button>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et officia tenetur, veritatis autem libero voluptates aliquam magni quis debitis sequi laboriosam quibusdam ratione enim natus, similique nisi voluptatem soluta quasi?</p>
+    <p></p>
+
+    <ul>
+        <li> <a href="#">Link falso </a></li>
+        <li> <a href="#">Link falso </a></li>
+        <li> <a href="#">Link falso </a></li>
+        <li> <a href="#">Link falso </a></li>
+    </ul>
+
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <form action="#">
+        <input type="text" value="valor inicial"> <br> <br>
+        <input type="text" value="valor" disabled><br> <br>
+        <input type="text" value="valor" readonly><br> <br>
+        <input type="text" placeholder="placeholder"><br> <br>
+        <input type="text">
+    </form>
+    <br><br>
+
+</body>
+</html>

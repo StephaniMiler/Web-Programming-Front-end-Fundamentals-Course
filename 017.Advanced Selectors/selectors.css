@@ -13,3 +13,19 @@ article a > b{
 h3 + p{
     background-color: aqua;
 }
+
+p + p{
+    background-color: yellow;
+}
+
+h3 ~ p{
+    border: 5px dashed pink;
+}
+
+.destaque{
+    padding-left: 2rem;
+}
+
+p:not(.destaque){
+    font-size: 1.5em;
+}

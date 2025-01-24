@@ -1,3 +1,35 @@
 div :first-child{
     color: red;
 }
+
+p:last-child{
+    color: blue;
+}
+
+p:nth-child(2){
+    background-color: aqua;
+}
+
+p:nth-child(4){
+    background-color: blueviolet;
+}
+
+p:first-of-type{
+    border: 5px dashed pink;;
+}
+
+p:last-of-type{
+    border: 3px solid blue;
+}
+
+p:nth-of-type(3){
+    background-color: yellow;
+}
+
+li:nth-child(odd){
+    background-color: aqua;
+}
+
+li:nth-child(even){
+    background-color: rgb(6, 93, 93);
+}

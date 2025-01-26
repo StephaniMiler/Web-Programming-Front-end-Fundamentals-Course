@@ -22,11 +22,26 @@ h1{
     font-size: 4rem;
     color: #7b7b7b;
     margin-top: 2rem;
+    margin-bottom: 3rem;
     padding-bottom: 4rem;
 }
 
 h2, h3, h4, h5, h6{
     color: var(--primary-color);
+}
+
+h2{
+    margin-top: 1rem;
+}
+
+article{
+    padding-top: 1px;
+    padding-top: 1px;
+}
+
+.underline{
+    text-decoration: red wavy underline;
+
 }
 
 .main-header{

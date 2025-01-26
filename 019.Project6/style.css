@@ -1,6 +1,7 @@
 :root{
     --primary-color: #FF7833;
     --secondary-color: #31333B;
+    --secondary-color-light: #444856;
 }
 
 html{
@@ -14,6 +15,18 @@ body{
     background-color: #ccc;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     min-height: 100vh;
+    line-height: 1.7rem;
+}
+
+h1{
+    font-size: 4rem;
+    color: #7b7b7b;
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+h2, h3, h4, h5, h6{
+    color: var(--primary-color);
 }
 
 .main-header{
@@ -22,10 +35,51 @@ body{
 }
 
 .main{
-    background-color: #444856;
+    background-color: var(--secondary-color-light);
     flex: 1 0;
+    padding: 6.5rem 6rem 7.5rem;
+}
+
+.main, 
+.main-header{
+    font-size: 1.6rem;
 }
 
 a{
     color: inherit;
 }
+
+.perfil-img{
+    max-width: 10rem;
+}
+
+.main-nav {
+    text-align: right;
+    padding: 6.5rem 2.4rem 2.4rem;
+}
+
+.main-nav ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-nav ul a{
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    transition: padding-right .2s, background-color .4s;
+    background-color: transparent;
+}
+
+.main-nav li{
+    border-bottom: 1px solid #7b7b7b;
+    padding: .4rem 0;
+}
+
+.main-nav ul a:hover{
+    background-color: var(--secondary-color-light);
+    padding-right: 1rem;
+}
+
+
+

@@ -34,9 +34,16 @@ h2{
     margin-top: 1rem;
 }
 
+.hightlight{
+    border-left: 1px solid var(--primary-color);
+    font-size: 1.1em;
+    padding-left: 2em;
+    margin-bottom: 2.2em;
+}
+
 article{
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .underline{
@@ -91,7 +98,8 @@ a{
     padding: .4rem 0;
 }
 
-.main-nav ul a:hover{
+.main-nav ul a:hover,
+.main-nav ul a:focus{
     background-color: var(--secondary-color-light);
     padding-right: 1rem;
 }

@@ -151,7 +151,14 @@ a{
 
 }
 
+.alternate li{
+    padding: 0;
+}
+
 .alternate li:not(:last-child)  {
     border-bottom: 2px solid;
-    padding: 0;
+}
+
+.list-emoji{
+    list-style-type: "\1F642";
 }

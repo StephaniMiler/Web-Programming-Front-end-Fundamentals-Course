@@ -37,13 +37,17 @@ h2{
 .hightlight{
     border-left: 1px solid var(--primary-color);
     font-size: 1.1em;
-    padding-left: 2em;
+    padding: 0 0 0 2em;
     margin-bottom: 2.2em;
 }
 
 article{
     padding-top: 1em;
     padding-bottom: 1em;
+}
+
+section{
+    margin-bottom: 3rem;
 }
 
 .underline{
@@ -104,5 +108,32 @@ a{
     padding-right: 1rem;
 }
 
+.card{
+    max-width: 740px;
+    background-color: var(--secondary-color);
+    padding: 0;
+}
 
+.card_content{
+    padding: .5em 1em 1em;
+}
 
+.card_content,
+.card_title {
+    margin: 0;
+}
+
+.card_title{
+    font-size: 1.75em;
+    margin-bottom: .25em;
+}
+
+.card img{
+    max-width: 100%;
+}
+
+.row{
+    display: flex;
+    gap: 3em;
+    padding: 1.5rem 0;
+}

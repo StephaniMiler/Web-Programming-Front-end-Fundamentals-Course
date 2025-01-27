@@ -234,3 +234,36 @@ input[type="radio"], input[type="checkbox"]{
     margin-top: 2rem;
  }
 
+ .table{
+    width: 100%;
+    border-collapse: collapse;
+ }
+
+ .table td:last-child,
+ table th:last-child{
+    text-align: right;
+ }
+
+ .table td,
+ table th{
+    padding: 1.6rem;
+ }
+
+ .table:not(.table-alternate) td,
+ .table:not(.table-alternate) th,{
+    border-bottom: 2px solid var(--secondary-color-dark);
+ }
+
+ .table th{
+    text-transform: uppercase;
+    text-align: left;
+ }
+
+ .table-alternate tbody tr:nth-child(odd){
+    background-color: var(--secondary-color);
+ }
+
+ .table-verticalLines td:not(:last-child),
+ .table-verticalLines th:not(:last-child){
+    border-right: 1px solid var(--secondary-color-dark);
+ }

@@ -1,0 +1,6 @@
+@media print{
+    body{
+        color: green;
+        font-family: serif;
+    }
+}

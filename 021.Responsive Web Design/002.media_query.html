@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
     <title>Media Query</title>
 
@@ -15,12 +16,26 @@
             color: inherit;
         }
 
+        @media screen and (max-width: 500px){
+        
+        body{
+            background-color: blue;
+        }
+
+    }
+
         @media screen and (min-width: 600px){
         
             body{
                 background-color: violet;
             }
 
+        }
+
+        .teste{
+            width: 320px;
+            height: 80px;
+            background-color: darkorange;
         }
 
     </style>
@@ -33,6 +48,8 @@
     <h1>Media Query</h1>
 
     <a href="https://www.google.com.br/?hl=pt-BR">Google</a>
+
+    <div class="teste">teste</div>
 </body>
 
 </html>

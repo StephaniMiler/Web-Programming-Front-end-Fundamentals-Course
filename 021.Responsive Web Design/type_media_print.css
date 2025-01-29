@@ -4,3 +4,9 @@
         font-family: serif;
     }
 }
+
+a::after{
+    content: "(LINK GOOGLE)";
+    display: inline-block;
+    margin-left: .5em;
+}

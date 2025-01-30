@@ -33,8 +33,6 @@ h4 {
     margin-bottom: 0;
 }
 
-
-
 .top_header_nav a {
     color: white;
     text-decoration: none;
@@ -73,7 +71,6 @@ h4 {
         background-color: color-mix(in srgb, var(--primary-color), white 85%);
     }
 }
-
 
 .heroBanner {
     text-align: center;
@@ -241,7 +238,6 @@ min-width: 74em     ->  col-xl
     }
 }
 
-
 .mainContent {
     padding: 2em;
 }
@@ -265,7 +261,6 @@ min-width: 74em     ->  col-xl
 .mainContent .row {
     row-gap: 4em;
 }
-
 
 .mainContent_article {
     container: main-content / inline-size;

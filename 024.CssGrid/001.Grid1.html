@@ -37,7 +37,7 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 100px 100px 100px;
             row-gap: 10px;
-            column-gap: 30px; 
+            column-gap: 5px; 
         }
 
         .gridItem:nth-child(1){
@@ -45,7 +45,7 @@
             grid-row-start: 1;
             grid-row-end: 2;
             grid-column-start: 1;
-            grid-column-end: -1;
+            grid-column-end: -2;
         }
 
         .gridItem:nth-child(5){
@@ -54,7 +54,15 @@
         }
 
         .gridItem:nth-child(6){
-            grid-row: 1/ span 4;
+            grid-column: span 2;
+        }
+
+        .gridItem:nth-child(4){
+            /*grid-row-start: 2;
+            grid-column-start: 3;
+            grid-row-end: -1;
+            grid-column-end: 4;*/
+            grid-area: 2 / 3 / -1 / 4;
         }
 
     </style>

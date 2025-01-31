@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
+
+    <style>
+        ::cue {
+            color: black;
+            font-size: 1.3em;
+            background-color: beige;
+
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- <audio src="media/mozart_trompa.mp3" controls></audio> -->
-
-    <audio controls autoplay loop>
-       <source src="media/mozart_trompa.mp3" type="audio/mp3"> 
-       <source src="media/mozart_trompa.ogg" type="audio/ogg">
-       <p>O seu browse não suporta o recurso de áudio</p> 
-    </audio>
+    <video controls autoplay>
+        <source src="media/video.mp4" type="video/mp4">
+        <source src="media/video.ogv" type="video/ogv">
+        <source src="media/video.webm" type="video/webm">
+        <track src="media/track.pt.vtt" kind="captions" srclang="pt" label="Português">
+        <track src="media/track.en.vtt" kind="captions" srclang="en" label="English" default>
+        <p>O seu browser não suporta vídeo</p>
+    </video>
 
 </body>
 

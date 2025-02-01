@@ -16,19 +16,16 @@
             background: #ccc;
             gap: 10px;
 
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            grid-auto-rows: minmax(100px, auto);
+            grid-template-rows: repeat(3, 100px);
+            grid-auto-flow: column;
+            grid-auto-columns: 50px;
+
         }
 
         .gridItem {
             background-color: orange;
             padding: 15px;
             font-family: sans-serif;
-        }
-
-        /*GRID*/
-        .gridContainer{
-            display: grid;
         }
 
     </style>
@@ -40,6 +37,11 @@
        <div class="gridItem">1</div>
        <div class="gridItem">2</div>
        <div class="gridItem">3</div>
+       <div class="gridItem">4</div>
+       <div class="gridItem">5</div>
+       <div class="gridItem">6</div>
+       <div class="gridItem">7</div>
+       <div class="gridItem">8</div>
     
     </div>
 

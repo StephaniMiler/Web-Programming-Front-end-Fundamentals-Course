@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 3 - Loop</title>
+</head>
+
+<body>
+    <h1>Challenge 3 -leap year</h1>
+
+    <script>
+
+        for(let year = 1004; year<=2024; year+=4){
+
+            let leapYear = year % 100 != 0 || year % 400 === 0
+
+            if(leapYear){
+                document.write(year + " <br>")
+            }
+ 
+        }
+
+    </script>
+</body>
+
+</html>

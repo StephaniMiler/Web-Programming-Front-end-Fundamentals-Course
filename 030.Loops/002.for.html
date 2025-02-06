@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>While</title>
+    <title>For / do</title>
 
 </head>
 
@@ -16,11 +16,10 @@
 
         if(!isNaN(n)){
 
-            let cont = 1
-            while (cont <=10){
-            document.write(n + " X " + cont + " = " + (n*cont) + "<br>")
+            for (let i=0; i<=10 ; i++){
 
-            cont++
+                document.write(n + " X " + i + " = " + (n * i) + "<br>")
+
         }}
         else{
             alert("You did not enter a valid value.")

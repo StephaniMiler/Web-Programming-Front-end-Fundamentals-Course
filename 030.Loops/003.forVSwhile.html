@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For vs While</title>
+
+</head>
+
+<body>
+    <h1>Loops dice</h1>
+    <script>
+        
+        let die1 = parseInt(Math.random() * 6 + 1)
+        let die2 = parseInt(Math.random() * 6 + 1)
+
+        let cont = 1
+
+        while(die1 != die2){
+            document.write("Die 1: " + die1 + " | Die 2: " + die2 + "<br>")
+            cont++
+            die1 = parseInt(Math.random() * 6 + 1)
+            die2 = parseInt(Math.random() * 6 + 1)
+        }
+
+        document.write("For both dice to land on the same number, " + cont + " rolls were needed. <br>")
+        document.write("Die 1: " + die1 + " | Die 2: " + die2)
+
+    </script>
+</body>
+
+</html>

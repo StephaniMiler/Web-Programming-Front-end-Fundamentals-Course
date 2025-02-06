@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>break vs continue</h1>
+
+    <script>
+
+        let timesDiceRolled = 0;
+        let timesSumIsEven = 0;
+
+        while (true) {
+            let die1 = parseInt(Math.random() * 6) + 1;
+            let die2 = parseInt(Math.random() * 6) + 1;
+            document.write(die1 + " ", die2 + " ",timesDiceRolled + " ", timesSumIsEven + "<br>");
+
+            if (die1 === die2) {
+                continue;
+            }
+
+            timesDiceRolled++;
+
+            if ((die1 + die2) % 2 === 0) {
+                timesSumIsEven++;
+            }
+
+            if (timesSumIsEven >= 10) {
+                break;
+            }
+        }
+
+        document.write("The dice were rolled " + timesDiceRolled + " times");
+
+    </script>
+</body>
+
+</html>

@@ -12,14 +12,19 @@
     <script>
         let names = ["Stephani", "Maria", "João", "Paulo", "Marcio"]
 
-        document.write(names[0] +"<br>")
-        document.write(names[1] +"<br>")
+        //Adicionar elementos no final do array
+        let name = prompt("Enter a name: ")
 
+        names[names.length] = name
+
+        /*document.write(names[0] +"<br>")
+        document.write(names[1] +"<br>")*/
 
         for(let i=0 ; i < names.length; i++){
             document.write(names[i] + "<br>")
         }
 
+        document.write("The list contains " + names.length + " names")
 
 
     </script>

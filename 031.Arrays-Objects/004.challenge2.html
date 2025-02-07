@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays - Challenge 2 </h1>
+
+    <script>
+
+        const numbers = [1, 2, "Ste", 3, false, 4, 5, "20", 6]
+
+        let sum = 0
+
+        for(let i=0; i < numbers.length; i++){
+
+            let n = 0
+
+            if(typeof(numbers[i]) === "number"){
+                n = numbers[i]
+            }
+        
+            sum+= n
+        }
+
+        alert("The sum of the numbers in the array is: " + sum)
+
+    
+    </script>
+
+</body>
+
+</html>

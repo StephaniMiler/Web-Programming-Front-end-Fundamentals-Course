@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>Objects </h1>
+
+    <script>
+
+        const car = {
+            model: "uno",
+            year: 2003,
+            km: 10000,
+            fuel: "gas",
+            liters_consumed:  625  }
+
+        car.brand = "Fiat"
+
+        let liters = car.km / car.liters_consumed
+
+        document.write("The car " + car.brand + " " +    car.model + " " + car.year + " did an average of " + liters + " of Km/L <br>")
+
+        //loop for...in serve para interagir com um objeto
+        for(let prop in car){
+            document.write(prop + ": " + car[prop] + "<br>")
+        }
+
+    
+    </script>
+
+</body>
+
+</html>

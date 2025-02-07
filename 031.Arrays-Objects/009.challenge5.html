@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>Objects - Challenge</h1>
+
+    <script>
+
+        let name = (prompt("Enter your name: "))
+        let email = (prompt("Enter your email: "))
+
+        const people = {name, email}
+
+        for(let prop in people){
+            document.write(prop + ": " + people[prop] + "<br>")
+        }
+
+
+    
+    </script>
+
+</body>
+
+</html>

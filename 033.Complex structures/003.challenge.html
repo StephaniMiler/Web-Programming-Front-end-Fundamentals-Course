@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+
+<body>
+
+    <h1>Student Information</h1>
+
+    <ul id="studentList">
+        <!-- <li>Daniel, average: 3</li>
+        <li>Maria, average: 7</li> -->
+    </ul>
+
+    <script>
+        const students = [
+            { name: "Daniel", grades: [1, 3, 3, 8] },
+            { name: "Maria", grades: [10, 7, 9, 8] },
+            { name: "João", grades: [10, 6, 3, 0] },
+        ]
+
+        const studentList = document.getElementById("studentList")
+        let studentsHTML = ""
+
+        for (let i = 0; i < students.length; i++) {
+            studentsHTML += "<li>" + students[i].name + ", average: "
+            let sum = 0
+            for (let j = 0; j < students[i].grades.length; j++) {
+                console.log("i:", i, "j:", j)
+                sum += students[i].grades[j]
+            }
+            let average = sum / students[i].grades.length
+            studentsHTML += average + "</li>"
+        }
+        studentList.innerHTML = studentsHTML
+    </script>
+
+</body>
+
+</html>

@@ -14,11 +14,15 @@ Obesidade Grau II 35 a 40 kg/m2
 Obesidade Grau III maior que 40 kg/m2
 */
 
-function CalcularIMC(peso, altura) {
+function CalcularIMC(peso, altura, callback) {
     if(peso === undefined || altura === undefined){
         throw Error("Need two parameters: weight and height")
     }
-    return peso / (altura ** 2)
+    let imc =  peso / (altura ** 2)
+    if(typeof callback === "function"){
+        return callback(imc)
+    }
+    return imc
 }
 
 function classificaIMC(imc){
@@ -40,6 +44,9 @@ function classificaIMC(imc){
 }
 
 let imc = CalcularIMC(60, 1.50)
+let imc2 = CalcularIMC(60, 1.50, classificaIMC)
+
 console.log(imc)
-console.log(classificaIMC(imc))
+console.log(imc2)
+
 

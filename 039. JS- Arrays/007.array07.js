@@ -23,3 +23,27 @@ let { nome, idade } = pessoa;
 console.log(nome); // João
 console.log(idade); // 25
 
+//O loop for...of é usado para iterar sobre elementos de arrays, strings e outros objetos iteráveis.
+let numeros3 = [10, 20, 30, 40];
+
+for (let numero of numeros3) {
+    console.log(numero);
+}
+// Saída:
+// 10
+// 20
+// 30
+// 40
+
+//for...in com Objetos e Destructuring
+let pessoa2 = { nome: "Ana", idade: 25, cidade: "Rio de Janeiro" };
+
+for (let chave in pessoa2) {
+    let valor = pessoa2[chave];
+    console.log(`${chave}: ${valor}`);
+}
+// Saída:
+// nome: Ana
+// idade: 25
+// cidade: Rio de Janeiro
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades</title>
+</head>
+
+<body>
+    
+    <h1 id="title1">Propriedades</h1>
+
+    <main class="cmain" id="idmain">
+        <h2>Subtítulo</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, illum?</p>
+    </main>
+
+    <form action="#">
+        <input type="text" id="txtName" placeholder="Name"><br>
+        <input type="text" id="txtEmail" placeholder="Email"><br>
+        <input type="checkbox" id="contrato">
+        <label for="contrato">I read and accept the therms</label>
+    </form>
+
+    <script>
+        const txtName = document.querySelector("#txtName")
+        const txtEmail = document.querySelector("#txtEmail")
+        const labelContrato = document.querySelector("label[for='contrato']")
+
+        console.log(labelContrato.htmlFor)
+        
+        //txtName.value = "Stephani"
+        //txtName.disabled = true
+        
+        //txtEmail.readOnly = true
+
+
+
+    </script>
+
+</body>
+
+</html>

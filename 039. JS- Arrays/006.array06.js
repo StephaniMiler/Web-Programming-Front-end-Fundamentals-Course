@@ -7,3 +7,6 @@ console.log(arrayLetras); // ['H', 'e', 'l', 'l', 'o']
 //Array.of() – Cria um array a partir dos argumentos passados.
 let numeros = Array.of(1, 2, 3, 4, 5);
 console.log(numeros); // [1, 2, 3, 4, 5]
+
+
+

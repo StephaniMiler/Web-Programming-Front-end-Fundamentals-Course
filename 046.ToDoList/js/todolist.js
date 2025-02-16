@@ -6,13 +6,12 @@
     const todoAddForm = document.getElementById("todo-add");
     const ul = document.getElementById("todo-list");
 
-    let arrTasks = [
-       /* {
-            name: "task 1",
-            createAt: Date.now(),
-            completed: false
-        }*/
-    ];
+    // Recupera as tarefas do Local Storage ou inicia uma lista vazia
+    let arrTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    function saveTasks() {
+        localStorage.setItem("tasks", JSON.stringify(arrTasks));
+    }
 
     function generateLiTask(obj) {
         const li = document.createElement("li");
@@ -78,6 +77,7 @@
         arrTasks.forEach(task => {
             ul.appendChild(generateLiTask(task));
         });
+        saveTasks(); // Salva a lista sempre que for renderizada
     }
 
     function addTask(task) {
@@ -86,6 +86,7 @@
             createAt: Date.now(),
             completed: false
         });
+        saveTasks(); // Salva as tarefas no Local Storage
     }
 
     function clickedUl(e) {
@@ -136,5 +137,8 @@
     });
 
     ul.addEventListener("click", clickedUl);
+    
+    // Renderiza as tarefas ao carregar a página
     renderTasks();
+
 })();

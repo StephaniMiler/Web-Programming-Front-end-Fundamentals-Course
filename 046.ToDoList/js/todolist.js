@@ -1,118 +1,140 @@
-; (function () {
+;(function () {
     "use strict"
 
-    //ARMAZENAR O DOM EM VARIAVEIS
-    const itemInput = document.getElementById("item-input")
-    const todoAddForm = document.getElementById("todo-add")
-    const ul = document.getElementById("todo-list")
-    //const lis = ul.getElementsByTagName("li")
+    // ARMAZENAR O DOM EM VARIÁVEIS
+    const itemInput = document.getElementById("item-input");
+    const todoAddForm = document.getElementById("todo-add");
+    const ul = document.getElementById("todo-list");
 
     let arrTasks = [
-        {
+       /* {
             name: "task 1",
             createAt: Date.now(),
             completed: false
+        }*/
+    ];
+
+    function generateLiTask(obj) {
+        const li = document.createElement("li");
+        const p = document.createElement("p");
+        const checkButton = document.createElement("button");
+        const editButton = document.createElement("i");
+        const deleteButton = document.createElement("i");
+
+        li.className = "todo-item";
+
+        // Botão de Check
+        checkButton.className = "button-check";
+        checkButton.innerHTML = `<i class="fas fa-check ${obj.completed ? "" : "displayNone"}"></i>`;
+        checkButton.setAttribute("data-action", "checkButton");
+        li.appendChild(checkButton);
+
+        // Nome da tarefa
+        p.className = "task-name";
+        p.textContent = obj.name;
+        if (obj.completed) {
+            p.style.textDecoration = "line-through"; // Se concluída, risca o texto
         }
-    ]
+        li.appendChild(p);
 
-   /* function addEventLi(li){
-        li.addEventListener("click", function(){
-            console.log(this)
-        })
-    }*/
+        // Botão de Edição
+        editButton.className = "fas fa-edit";
+        editButton.setAttribute("data-action", "editButton");
+        li.appendChild(editButton);
 
-    function generateLiTask(obj){
-        const li = document.createElement("li")
-        const p = document.createElement("p")
-        const checkButton = document.createElement("button")
-        const editButton = document.createElement("i")
-        const deleteButton = document.createElement("i")
+        // Container de edição
+        const containerEdit = document.createElement("div");
+        containerEdit.className = "editContainer";
+        const inputEdit = document.createElement("input");
+        inputEdit.setAttribute("type", "text");
+        inputEdit.className = "editInput";
+        inputEdit.value = obj.name
+        containerEdit.appendChild(inputEdit);
 
-        li.className = "todo-item"
+        const containerEditButton = document.createElement("button");
+        containerEditButton.className = "editButton";
+        containerEditButton.textContent = "Edit";
+        containerEditButton.setAttribute("data-action", "containerEditButton");
+        containerEdit.appendChild(containerEditButton);
 
-        checkButton.className ="button-check"
-        checkButton.innerHTML = '<i class= "fas fa-check displayNone"></i>'
-        checkButton.setAttribute("data-action", "checkButton")
+        const containerCancelButton = document.createElement("button");
+        containerCancelButton.className = "cancelButton";
+        containerCancelButton.textContent = "Cancel";
+        containerCancelButton.setAttribute("data-action", "containerCancelButton");
+        containerEdit.appendChild(containerCancelButton);
 
-        li.appendChild(checkButton)
-        
-        p.className = "task-name"
-        p.textContent = obj.name
-        li.appendChild(p)
+        li.appendChild(containerEdit);
 
-        editButton.className = "fas fa-edit"
-        editButton.setAttribute("data-action", "editButton")
-        li.appendChild(editButton)
+        // Botão de Deletar
+        deleteButton.className = "fas fa-trash-alt";
+        deleteButton.setAttribute("data-action", "deleteButton");
+        li.appendChild(deleteButton);
 
-        const containerEdit = document.createElement("div")
-        containerEdit.className = "editContainer"
-        const inputEdit = document.createElement("input")
-        inputEdit.setAttribute("type", "text")
-        inputEdit.className = "editInput"
-        containerEdit.appendChild(inputEdit)
-
-        const containerEditButton = document.createElement("button")
-        containerEditButton.className = "editButton"
-        containerEditButton.textContent = "Edit"
-        containerEditButton.setAttribute("data-action", "containerEditButton")
-        containerEdit.appendChild(containerEditButton)
-
-        const containerCancelButton = document.createElement("button")
-        containerCancelButton.className = "cancelButton"
-        containerCancelButton.textContent = "Cancel"
-        containerCancelButton.setAttribute("data-action", "containerCancelButton")
-        containerEdit.appendChild(containerCancelButton)
-
-        li.appendChild(containerEdit)
-
-
-        deleteButton.className = "fas fa-trash-alt"
-        deleteButton.setAttribute("data-action", "deleteButton")
-        li.appendChild(deleteButton)
-
-       // addEventLi(li)
-        return li
+        return li;
     }
 
-    function renderTasks(){
-        ul.innerHTML = ""
+    function renderTasks() {
+        ul.innerHTML = "";
         arrTasks.forEach(task => {
-            ul.appendChild(generateLiTask(task))
-        })
+            ul.appendChild(generateLiTask(task));
+        });
     }
 
-    function addTask(task){
-
+    function addTask(task) {
         arrTasks.push({
             name: task,
             createAt: Date.now(),
             completed: false
-        })
+        });
     }
 
-    function clickedUl(e){
-        console.log(e.target)
-        console.log(e.target.getAttribute("data-action"))
+    function clickedUl(e) {
+        const dataAction = e.target.getAttribute("data-action");
+        if (!dataAction) return;
+
+        let currentLi = e.target.closest("li"); // Encontra o <li> pai do elemento clicado
+        let taskIndex = [...ul.children].indexOf(currentLi); // Encontra o índice da tarefa no array
+
+        const actions = {
+            checkButton: function () {
+                arrTasks[taskIndex].completed = !arrTasks[taskIndex].completed; // Alterna o estado
+                renderTasks();
+            },
+            editButton: function () {
+                const editContainer = currentLi.querySelector(".editContainer");
+                editContainer.style.display = "block";
+            },
+            containerEditButton: function () {
+                const newValue = currentLi.querySelector(".editInput").value;
+                if (newValue.trim()) {
+                    arrTasks[taskIndex].name = newValue;
+                    renderTasks();
+                }
+            },
+            containerCancelButton: function () {
+                renderTasks();
+            },
+            deleteButton: function () {
+                arrTasks.splice(taskIndex, 1); // Remove a tarefa do array
+                renderTasks();
+            }
+        };
+
+        if (actions[dataAction]) {
+            actions[dataAction]();
+        }
     }
 
-    todoAddForm.addEventListener("submit", function(e){
-        e.preventDefault()
-
-       /* ul.innerHTML += 
-        `
-            <li class="todo-item">
-                <p class="task-name">${itemInput.value}</p>
-            </li>   
-        `*/
-        addTask(itemInput.value)
-        renderTasks()
-
-        itemInput.value = ""
-        itemInput.focus()
+    todoAddForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (itemInput.value.trim()) {
+            addTask(itemInput.value);
+            renderTasks();
+            itemInput.value = "";
+            itemInput.focus();
+        }
     });
 
-    ul.addEventListener("click", clickedUl)
-
-    renderTasks()
-
+    ul.addEventListener("click", clickedUl);
+    renderTasks();
 })();

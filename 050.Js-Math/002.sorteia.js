@@ -4,4 +4,4 @@ function getRamdomNumber(start=0, end=10, integer) //numero inicial, final e se 
     return integer ? parseInt(r) : r
 }
 
-console.log(getRamdomNumber(0, 10))
+console.log(getRamdomNumber(2, 3))

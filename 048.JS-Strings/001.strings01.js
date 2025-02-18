@@ -32,3 +32,13 @@ console.log(parte1); // Saída: "JavaScript"
 let texto7 = "Desenvolvimento Web";
 let parte2 = texto7.substring(0, 12);
 console.log(parte2); // Saída: "Desenvolvimento"
+
+// Exemplo de toLowerCase()
+let texto8 = "JavaScript É PODEROSO!";
+let minusculo = texto8.toLowerCase();
+console.log(minusculo); // Saída: "javascript é poderoso!"
+
+// Exemplo de toUpperCase()
+let texto9 = "aprendendo javascript";
+let maiusculo = texto9.toUpperCase();
+console.log(maiusculo); // Saída: "APRENDENDO JAVASCRIPT"

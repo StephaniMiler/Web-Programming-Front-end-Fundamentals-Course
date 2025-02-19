@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+
+    <h1>BOM - Browse Object Model</h1>
+
+
+    <h2>History</h2>
+    <button id="btnBack">Voltar</button>
+    <br>
+    <button id="btnForward">Avançar</button>
+    <script>
+
+        console.log(history)
+
+        document.getElementById("btnBack").addEventListener("click", function(){
+            history.back()
+        })
+        document.getElementById("btnBack").addEventListener("click", function(){
+            history.forward()
+        })
+
+    </script>
+    
+</body>
+</html>

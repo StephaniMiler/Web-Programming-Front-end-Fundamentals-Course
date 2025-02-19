@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+
+    <h1>BOM - Browse Object Model</h1>
+    <br>
+    <h2>Events</h2>
+
+    <script>
+
+        // Evento de carregamento da janela
+        window.onload = function () {
+            console.log("A página foi carregada!");
+        };
+
+        // Evento de redimensionamento da janela
+        window.onresize = function () {
+            console.log("A janela foi redimensionada! Largura: " + window.innerWidth + "px");
+        };
+
+        // Evento de rolagem da página
+        window.onscroll = function () {
+            console.log("A página foi rolada! Posição atual: " + window.scrollY + "px");
+        };
+
+        // Evento de fechamento da página (antes de sair)
+        window.onbeforeunload = function () {
+            return "Tem certeza que deseja sair?";
+        };
+
+        // Evento de clique no documento
+        document.onclick = function (event) {
+            console.log("Clique detectado nas coordenadas X: " + event.clientX + " Y: " + event.clientY);
+        };
+
+        // Evento de tecla pressionada
+        document.onkeydown = function (event) {
+            console.log("Tecla pressionada: " + event.key);
+        };
+
+        // Evento de erro no carregamento
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            console.log("Erro detectado: " + msg + " em " + url + " linha " + lineNo);
+        };
+
+
+
+    </script>
+
+    
+</body>
+</html>

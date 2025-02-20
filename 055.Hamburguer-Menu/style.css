@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+main {
+    padding: 22px;
+}
+
+.nav-menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #444;
+}
+
+/* Esconder menu quando fechado */
+.menu-closed {
+    display: none;
+}
+
+.hamburger-button .icon {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.hamburger-button[aria-expanded="false"] .icon::before {
+    content: "\2630"; /* Ícone de menu */
+}
+
+.hamburger-button[aria-expanded="true"] .icon::before {
+    content: "\2715"; /* Ícone de fechar */
+}
+
+.hamburger-button-js-enabled + .menu {
+    display: flex;
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+    top: 60px;
+    flex-direction: column;
+}
+
+.menu li a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    background-color: #555;
+}
+
+/* Estilização melhorada do botão para contraste */
+.hamburger-button {
+    display: none;
+    background-color: #555;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.hamburger-button:focus {
+    outline: 2px solid yellow;
+}
+
+.hamburger-button-js-enabled {
+    display: block;
+}
+
+.menu-closed {
+    display: none !important;
+}
+
+/* Menu visível em telas grandes */
+@media (min-width: 768px) {
+    .hamburger-button {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
